@@ -1,0 +1,34 @@
+ASSIGNMENT-10.4
+2403A52060
+BATCH-03
+TASK-01 SYNTAX AND ERROR DETECTION
+ 
+EXPLANATION:
+Error in code Task 1: The original prompt contained several errors in the Python script: Syntax Error: The def add_numbers(a, b) line was missing a colon : at the end. Indentation Error: The lines result = a + b and return reslt were not indented correctly within the add_numbers function. Python uses indentation to define code blocks. Variable Error: The line return reslt had a typo; the variable reslt was used instead of result. Syntax Error: The print(add_numbers(10 20)) line was missing a comma , between the arguments 10 and 20.
+TASK-02 Logical and Performance Issue Review
+ 
+EXPLANATION:
+Instead of using nested loops to compare every element with every other element (which is inefficient, especially for large lists), I used a more efficient approach with sets: initialized two empty sets: seen to keep track of the numbers encountered so far, and duplicates to store the numbers that appear more than once. I iterated through the input list nums only once. For each num in the list: I checked if num is already in the seen set. If it is, it means we've encountered this number before, so it's a duplicate. I added it to the duplicates set. I then added the current num to the seen set. Finally, I converted the duplicates set back to a list before returning it. This approach has a time complexity of O(n), where n is the number of elements in the list, which is much more efficient than the original O(n^2) approach, especially for larger datasets.
+TASK-03 Code Refactoring for Readability
+ 
+EXPLANATION:
+I refactored the code to make it more readable and follow PEP 8 guidelines. Here are the specific changes I made Function Name: I changed the function name from the very short and uninformative c to a more descriptive name, calculate_factorial. This makes it clear what the function does. Variable Names: I changed the variable names n to number and x to result to improve readability. Formatting: I added proper indentation and spacing to make the code easier to read and understand, adhering to PEP 8 standards. Docstring: I added a docstring to the calculate_factorial function. A docstring explains what the function does, its arguments (Args), and what it returns (Returns). This is a crucial part of writing well-documented and maintainable code. Example Usage: I added a comment to clarify the example usage of the function.
+TASK-04 Security and Error Handling Enhancement
+ 
+ 
+ 
+EXPLANATION:
+Using parameterized queries (? placeholder) to prevent SQL injection instead of putting the user ID directly in the query string. Adding input validation to check if the user ID is a number. Including try...except...finally blocks to handle database errors and ensure the connection is always closed.
+TASK-05 Automated Code Review Report Generation
+ 
+ 
+EXPLANATION:
+The original code defines a function calc to do simple math (+, -, *, /) based on text input. It prints "wrong" for invalid operations but crashes on division by zero.The improved code, perform_operation, does the same math but is better because:It uses clearer names and formatting (PEP 8). It handles division by zero gracefully, returning None. It handles invalid operations by printing an error and returning None. It's structured using a dictionary, making it easier to add more operations later.
+
+
+
+
+
+
+
+
